@@ -13,7 +13,6 @@
 <h1>红包雨记录</h1>
 
 <c:forEach items="${records}" var="temp">
-
 <tr>
 <td><c:out value="${temp.username}"/>&nbsp;&nbsp;&nbsp;</td>
 
