@@ -1,5 +1,7 @@
 package com.dcone.dtss;
 
+
+import java.util.List;
 import java.util.Locale;
 
 import org.slf4j.Logger;
@@ -12,6 +14,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.dcone.dtss.dao.RedPacketDao;
+import com.dcone.dtss.dao.RedRecordViewDAO;
+import com.dcone.dtss.model.red_record_view;
+
 import MyRainThread.MyRainThread;
 @Controller
 public class RedPacketController {
@@ -56,7 +61,22 @@ public class RedPacketController {
 	   else return "home";
 	}
 	
+	@RequestMapping(value="/rainview", method=RequestMethod.GET)
+	public String rainrecord( Model model) {
+		
+		
+		List<red_record_view> rrv=RedRecordViewDAO.getAllRecords(  jdbcTemplate) ;
+		System.out.println(rrv.get(0).getLuck_number());
+		
+		
+		model.addAttribute("records",  RedRecordViewDAO.getAllRecords(  jdbcTemplate) );
+	//	model.addAttribute("records",  RedRecordViewDAO.getAllWallets(  jdbcTemplate) );
+		
+		return "rainrecordlist";
 	}
+
+
+}
 	
 	
 
