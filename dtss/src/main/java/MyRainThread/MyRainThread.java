@@ -15,7 +15,7 @@ public class MyRainThread extends Thread{
 	JdbcTemplate template;
 	int round ;
 	public MyRainThread(){
-		
+		//test
 		round=0;
 	}
 	
@@ -23,6 +23,7 @@ public class MyRainThread extends Thread{
 		this.flag=flag;
 		this.round=round;
 		this.template=template;
+		
 		
 	}
 	
