@@ -20,9 +20,14 @@ import com.dcone.dtss.model.red_record_view;
 import MyRainThread.MyRainThread;
 @Controller
 public class RedPacketController {
+	
+	
+	
 	private static final Logger logger = LoggerFactory.getLogger(RedPacketController.class);
 	@Autowired
-    JdbcTemplate jdbcTemplate;
+	JdbcTemplate jdbcTemplate;
+
+	public int round=1;
 	
 	@RequestMapping(value="/init_red", method=RequestMethod.GET)
 	public String balanceAdd() {
@@ -38,10 +43,11 @@ public class RedPacketController {
 	
 	@RequestMapping(value="/TimeToRain", method=RequestMethod.GET)
 	public String Rainning() {
-		
 		MyRainThread t=new MyRainThread();
 		t.setTemplate(jdbcTemplate);
+		t.setRound(round);
 		t.start();
+		round++;
 		return "rainning";
 	}
 	

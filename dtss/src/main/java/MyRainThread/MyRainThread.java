@@ -68,7 +68,7 @@ public class MyRainThread extends Thread{
 		System.out.println("2");
 		
 		if(round<3) {
-        	round++;
+        	//round++;
         	
         	int total=RedPacketDao.getTotalByRound(round,template);
     		System.out.println(total);
@@ -87,7 +87,7 @@ public class MyRainThread extends Thread{
         		
         		total-=luckynum;
                 
-        		System.out.println(luckynum+" "+luckyman+" ");
+        		//System.out.println(luckynum+" "+luckyman+" ");
         		
         		RedRecordDAO.createRedSend(wallets.get(luckyman).getWid(), luckynum, round, template);
         		
