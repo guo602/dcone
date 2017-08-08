@@ -13,7 +13,7 @@
 <br>
 <a href="init_red">initredpacket</a>
 <br>
-<a href="preredrain">一起去看红包雨吧</a>
+<a href="preredrain">一起去看红包雨</a>
 
 <hr>
 现在服务器的时间是<c:out value="${serverTime }"></c:out>
