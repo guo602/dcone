@@ -16,6 +16,8 @@ public class MyRainThread extends Thread{
 	int round ;
 	public MyRainThread(){
 		//test
+		
+		//test guo
 		round=0;
 	}
 	
