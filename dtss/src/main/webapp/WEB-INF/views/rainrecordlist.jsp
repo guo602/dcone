@@ -19,6 +19,7 @@
 <td><c:out value="${temp.luck_number}"/>&nbsp;&nbsp;&nbsp;</td>
 
 <td><c:out value="${temp.round}"/></td>
+
 </tr>
 
 
